@@ -12,13 +12,13 @@ class ComplexNumber
 
     def +(comp)
         @@add_operations += 1;
-        return ComplexNumber.new(self.real+comp.real , self.imaginary+comp.imaginary)
+        return ComplexNumber.new(self.real+comp.real , self.imaginary + comp.imaginary)
        
     end
 
     def *(comp)
         @@multiply_operations += 1
-        return ComplexNumber.new(self.real*comp.real-self.imaginary*comp.imaginary ,
+        return ComplexNumber.new(self.real*comp.real-self.imaginary * comp.imaginary ,
              self.real*comp.imaginary+self.imaginary*comp.real)
     end
 
@@ -55,8 +55,8 @@ comp2 = ComplexNumber.new(1,7)
 
 comp3 = comp1+comp2
 comp4 = comp1*comp2
-puts comp4
 puts comp3
+puts comp4
 
 res=ComplexNumber.bulk_add([comp1,comp2,comp3])
 puts res
